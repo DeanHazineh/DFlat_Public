@@ -10,6 +10,7 @@ PROPER USE FOR LIBRARY CLASSES:
 
 
 NOTES ON INCLUDED DATA FILES:
+
 o data_Nanofins_Unit350nm_Height600nm_EngineFDTD.mat:
     - Generated via Lumerical FDTD parameter sweep on september 2021 (Dean Hazineh)
     - 350 nm unit cell size
@@ -35,3 +36,17 @@ o data_Nanocylinders_Unit180nm_Height600nm_EngineFDTD.mat:
     - Record phase (minus reference field consisting of no TiO2 structure) at single point ~um above structure
         - phasex and phasey are equivalent so just phasex is uploaded in the mat file 
     - Transmission computed by Lumerical power monitor above nanostructure (lumerical built in call automatically normalizes to source power without any user work)
+
+o data_NanoEllipse_Unit350nm_Height600nm_EngineFDTD.mat:
+    - Generated via Lumerical FDTD parameter sweep on July 2022 (Dean Hazineh)
+    - 350 nm unit cell seize
+    - response vs 1 nm step size in incident wavelength from 310 to 750 nm
+    - response vs 1 nm step size in cylinder radius between 60 and 300 nm
+    -
+    - X and Y polarized plane wave sources simultaneously incident (injected inside glass susbtrate)
+    - Bloch boundary conditions transverse to unit cell and PML normal
+    - Record phase (minus reference field consisting of no TiO2 structure) at single point ~500um above structure 
+    - Transmission manually computed by calculating x and y polarized light energy at single far away point ~500um above structure
+        and normalizing by energy at that point with no structure present. 
+        (The total light transmitted (polarization averaged) by this method is compared against the averaged Lumerical power monitor and shows good agreement between the two methods)
+
